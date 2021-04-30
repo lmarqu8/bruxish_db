@@ -143,15 +143,6 @@ export default class EditTeam extends Component {
                                className="form-control"
                                value={this.state.pokemon1}
                                onChange={this.onChangePokemon1}
-                               />
-                    </div>
-                    <div className="form-group">
-                        <label>Pokemon 1: </label>
-                        <input type="text"
-                               required
-                               className="form-control"
-                               value={this.state.pokemon1}
-                               onChange={this.onChangePokemon1}
                         />
                     </div>
                     <div className="form-group">

@@ -112,7 +112,7 @@ export default class EditTeam extends Component {
         axios.post('https://bruxish-db.herokuapp.com/teams/update/'+this.props.match.params.id, team)
             .then(res => console.log(res.data));
 
-        window.location = 'https://bruxish-db.herokuapp.com/teams/';
+        window.location = '/teams/';
     }
 
     render() {

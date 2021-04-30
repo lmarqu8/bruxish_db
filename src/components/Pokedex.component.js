@@ -25,7 +25,7 @@ export default class Pokemons extends Component {
         this.state = {pokemons: []};
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/Pokedex/')
+        axios.get('https://bruxish-db.herokuapp.com/Pokedex/')
             .then(response => {
                 this.setState({ pokemons: response.data });
             })

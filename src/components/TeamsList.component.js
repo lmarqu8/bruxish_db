@@ -27,7 +27,7 @@ export default class Teams extends Component {
         this.state = {teams: []};
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/teams/')
+        axios.get('https://bruxish-db.herokuapp.com/teams/')
             .then(response => {
                 this.setState({ teams: response.data });
             })
@@ -37,7 +37,7 @@ export default class Teams extends Component {
     }
 
     deleteTeam(id) {
-        axios.delete('http://localhost:5000/teams/'+id)
+        axios.delete('https://bruxish-db.herokuapp.com/teams/'+id)
             .then(res => console.log(res.data));
 
         this.setState({

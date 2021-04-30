@@ -28,7 +28,7 @@ export default class CreateTeam extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/users')
+        axios.get('https://bruxish-db.herokuapp.com/users')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -99,7 +99,7 @@ export default class CreateTeam extends Component {
 
         console.log(team);
 
-        axios.post('http://localhost:5000/teams/add', team)
+        axios.post('https://bruxish-db.herokuapp.com/teams/add', team)
             .then(res => console.log(res.data));
 
         window.location = '/teams';

@@ -27,7 +27,7 @@ export default class EditTeam extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/teams/'+this.props.match.params.id)
+        axios.get('https://bruxish-db.herokuapp.com/teams/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     username: response.data.username,
@@ -43,7 +43,7 @@ export default class EditTeam extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/users/')
+        axios.get('https://bruxish-db.herokuapp.com/users/')
             .then(response => {
                 this.setState({ users: response.data.map(user => user.username) });
             })
@@ -109,7 +109,7 @@ export default class EditTeam extends Component {
 
         console.log(team);
 
-        axios.post('http://localhost:5000/teams/update/'+this.props.match.params.id, team)
+        axios.post('https://bruxish-db.herokuapp.com/teams/update/'+this.props.match.params.id, team)
             .then(res => console.log(res.data));
 
         window.location = '/teams';
